@@ -11,6 +11,10 @@ right.click (function(){
   current.removeClass("active");
   image.next().addClass("active");
 
+  if(current.hasClass("last")){
+    current.removeClass("active");
+    image.prev().addClass("active");
+  }
 
  });
 
@@ -20,4 +24,8 @@ right.click (function(){
    current.removeClass("active");
    image.prev().addClass("active");
 
+   if(current.hasClass("first")){
+     current.removeClass("active");
+     image.next().addClass("active");
+   }
  })
