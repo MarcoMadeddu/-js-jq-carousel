@@ -1,31 +1,33 @@
 console.log("done");
+var first = $ (".first");
+var last = $(".last");
 var left = $ (".left-row");
 var right = $ (".right-row");
-var current = $(".box img");
 
 
-right.click (function(){
 
-  var image = $ (".active");
+ right.click (function(){
+   var currentImg = $ (".active");
 
-  current.removeClass("active");
-  image.next().addClass("active");
+   currentImg.removeClass('active');
+   currentImg.next().addClass("active");
 
-  if(current.hasClass("last")){
-    current.removeClass("active");
-    image.prev().addClass("active");
-  }
+   if(currentImg.hasClass("last")){
+     first.addClass("active");
+   }
 
  });
 
  left.click (function(){
 
-   var image = $ (".active");
-   current.removeClass("active");
-   image.prev().addClass("active");
+   var currentImg = $ (".active");
 
-   if(current.hasClass("first")){
-     current.removeClass("active");
-     image.next().addClass("active");
+   currentImg.removeClass("active");
+   currentImg.prev().addClass("active");
+
+   if(currentImg.hasClass("first")){
+     last.addClass("active");
    }
- })
+
+
+  });
