@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.app{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box img {
+  width: 700px;
+  display: none;
+}
+
+.left-row a,
+.right-row a{
+  margin: 15px;
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+}
+
+.box .active{
+  display: block;
+}
